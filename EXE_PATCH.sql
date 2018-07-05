@@ -4,7 +4,7 @@ BEGIN
                                  , program_type         => 'EXECUTABLE'
                                  , number_of_arguments  => 1
                                  , comments             => NULL
-                                 , enabled              => TRUE
+                                 , enabled              => FALSE
                                  );
         
     DBMS_SCHEDULER.define_program_argument( program_name        => 'EXE_PATCH'
@@ -13,5 +13,7 @@ BEGIN
                                           , argument_type       => 'VARCHAR2'
                                           , out_argument        => FALSE
                                           );
+    DBMS_SCHEDULER.ENABLE(name=>'EXE_PATCH');
+                                          
     commit;
 END;
