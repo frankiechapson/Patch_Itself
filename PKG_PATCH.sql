@@ -20,7 +20,7 @@ create or replace PACKAGE PKG_PATCH IS
     PROCEDURE DONE   ( I_VERSION IN NUMBER DEFAULT G_VERSION );
 
 END PKG_PATCH;
-
+/
 
 /*============================================================================================*/
 create or replace PACKAGE BODY PKG_PATCH IS
@@ -110,3 +110,4 @@ create or replace PACKAGE BODY PKG_PATCH IS
     END;
 
 END PKG_PATCH;
+/
